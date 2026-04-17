@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ceatano Veríssimo - Advocacia Empresarial</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+            overflow-x: hidden;
+        }
+
+        /* --- ANIMAÇÕES --- */
+        @keyframes fadeDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 60px;
+            background-color: rgba(17, 17, 17, 0.95);
+            border-bottom: 2px solid #b89758;
+            position: fixed; /* Fixa o menu no topo */
+            width: 100%;
+            z-index: 100;
+            animation: fadeDown 0.8s ease-out; /* Efeito ao carregar */
+        }
+
+        nav .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #aaa;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #b89758;
+        }
+
+        /* Hero - Sessão Principal */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* justifyContent centraliza o conteúdo verticalmente. Com o padding-top alto, empurramos para baixo */
+            justify-content: center; 
+            text-align: center;
+            min-height: 100vh; /* Faz a seção ocupar 100% da altura da tela */
+            padding: 280px 20px 100px 20px; /* Muito espaço em cima (280px) para descer o texto e mostrar a logo do fundo */
+            
+            /* Imagem de Fundo com uma leve camada escura para garantir a leitura do texto */
+            background: linear-gradient(rgba(26, 26, 26, 0.4), rgba(17, 17, 17, 0.95)), url('logo.png');
+            background-size: cover;
+            background-position: center 30%; /* Posiciona a imagem um pouco mais para cima */
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* Efeito Parallax */
+        }
+
+        /* Aplicando o efeito Cascata nos elementos do Hero */
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 20px;
+            animation: fadeUp 1s ease-out 0.3s both; /* Delay de 0.3s */
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: #d0d0d0;
+            max-width: 650px;
+            line-height: 1.7;
+            margin-bottom: 40px;
+            animation: fadeUp 1s ease-out 0.6s both; /* Delay de 0.6s */
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 40px;
+            background-color: #1c2a43;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 600;
+            border: 1px solid #1c2a43;
+            transition: all 0.3s ease;
+            animation: fadeUp 1s ease-out 0.9s both; /* Delay de 0.9s */
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: #b89758;
+            border-color: #b89758;
+            transform: translateY(-2px);
+        }
+
+        /* Features - Áreas de Atuação */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 100px 60px;
+            background-color: #1a1a1a;
+        }
+
+        .feature-card {
+            background-color: #222;
+            padding: 40px 30px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #333;
+            transition: border-color 0.3s, transform 0.3s;
+        }
+
+        .feature-card:hover {
+            border-color: #b89758;
+            transform: translateY(-4px);
+        }
+
+        /* Seção de Contato - Layout Dividido */
+        .cta {
+            padding: 100px 60px;
+            background-color: #111;
+            border-top: 1px solid #222;
+        }
+
+        .cta-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .cta-text {
+            flex: 1;
+            text-align: left;
+        }
+
+        .cta-text h2 {
+            font-size: 2.5rem;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .cta-text p {
+            color: #999;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .contact-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .contact-item {
+            text-decoration: none;
+            color: #ccc;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+            transition: color 0.3s;
+            padding: 15px;
+            background-color: #1a1a1a;
+            border-radius: 8px;
+            border: 1px solid #222;
+        }
+
+        .contact-item:hover {
+            color: #b89758;
+            border-color: #b89758;
+            background-color: #222;
+        }
+
+        .contact-item span {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .icon-box {
+            min-width: 50px;
+            height: 50px;
+            background-color: #1c2a43;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: #fff;
+            border: 1px solid #1c2a43;
+            transition: all 0.3s;
+        }
+
+        .contact-item:hover .icon-box {
+            background-color: transparent;
+            border-color: #b89758;
+            color: #b89758;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #0a0a0a;
+            color: #555;
+            font-size: 0.85rem;
+        }
+
+        /* Responsividade para celular */
+        @media (max-width: 768px) {
+            nav { padding: 15px 30px; position: absolute; }
+            .hero { padding: 180px 20px 80px 20px; }
+            .hero h1 { font-size: 2.2rem; }
+            .cta { padding: 60px 20px; }
+            .cta-container { flex-direction: column; text-align: center; }
+            .cta-text { text-align: center; }
+            .contact-item { justify-content: flex-start; text-align: left; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo-text">Ceatano Veríssimo</div>
+        <ul>
+            <li><a href="#features">Áreas de Atuação</a></li>
+            <li><a href="#cta">Contato</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Excelência em Direito Empresarial</h1>
+        <p>Garantimos a segurança jurídica necessária para o crescimento estruturado da sua empresa.</p>
+        <a href="#cta" class="btn">Solicitar Consultoria</a>
+    </section>
+
+    <section class="features" id="features">
+        <div class="feature-card">
+            <h3>Societário</h3>
+            <p>Constituição e estruturação de empresas e acordos de sócios.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Contratos</h3>
+            <p>Análise e mitigação de riscos em negociações comerciais.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Compliance</h3>
+            <p>Programas de integridade e prevenção trabalhista.</p>
+        </div>
+    </section>
+
+    <section class="cta" id="cta">
+        <div class="cta-container">
+            <div class="cta-text">
+                <h2>Fale Conosco</h2>
+                <p>Escolha o canal de sua preferência para um atendimento especializado. Nossa equipe está pronta para proteger o patrimônio e os interesses do seu negócio.</p>
+                <a href="https://wa.me/5561999999999" class="btn">Iniciar Atendimento Digital</a>
+            </div>
+
+            <div class="contact-info">
+                <a href="https://wa.me/5561999999999" target="_blank" class="contact-item">
+                    <div class="icon-box">W</div>
+                    <span>(61) 99999-9999</span>
+                </a>
+                <a href="mailto:contato@ceatanoverissimo.com.br" class="contact-item">
+                    <div class="icon-box">@</div>
+                    <span>contato@ceatanoverissimo.com.br</span>
+                </a>
+                <a href="https://maps.google.com" target="_blank" class="contact-item">
+                    <div class="icon-box">L</div>
+                    <span>Setor Comercial Norte, Brasília - DF</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Ceatano Veríssimo Advocacia. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
