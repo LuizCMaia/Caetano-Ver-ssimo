@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Caetano Veríssimo Advocacia</title>
+  <meta name="description" content="Caetano Veríssimo Advocacia — atuação estratégica e personalizada em consultoria e contencioso.">
+  <meta name="theme-color" content="#090909">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============ SÍMBOLO (reutilizado via <use>) ============ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="monograma" viewBox="0 0 66 50">
+      <text x="0" y="42" font-family="'Cormorant Garamond', Georgia, serif" font-size="56" font-weight="500" fill="currentColor">C</text>
+      <polygon fill="currentColor" points="45,4 64,4 64,5.6 57.4,5.6 41.4,44 39.6,44 48.6,5.6 45,5.6"/>
+    </symbol>
+  </svg>
+
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="topo">
+    <div class="container header__inner">
+      <a href="#inicio" class="brand" aria-label="Caetano Veríssimo — início">
+        <svg class="brand__mark"><use href="#monograma"/></svg>
+        <span class="brand__name">Caetano Veríssimo<small>Advocacia</small></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Principal">
+        <ul class="nav__list">
+          <li><a href="#escritorio">Escritório</a></li>
+          <li><a href="#areas">Áreas de atuação</a></li>
+          <li><a href="#equipe">Equipe</a></li>
+          <li><a href="#conteudo-juridico">Conteúdo</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+        <a href="#contato" class="btn btn--outline nav__cta">Fale conosco</a>
+      </nav>
+
+      <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="inicio">
+      <div class="hero__bg" aria-hidden="true">
+        <svg class="hero__watermark"><use href="#monograma"/></svg>
+        <div class="hero__lines"></div>
+      </div>
+
+      <div class="container hero__content">
+        <p class="eyebrow reveal">Caetano Veríssimo Advocacia</p>
+        <h1 class="hero__title reveal">
+          O Direito como<br><em>instrumento de</em> transformação.
+        </h1>
+        <p class="hero__lead reveal">
+          Atuação estratégica, técnica e personalizada na defesa dos interesses de
+          pessoas e empresas — do consultivo aos tribunais superiores.
+        </p>
+        <div class="hero__actions reveal">
+          <a href="#escritorio" class="btn btn--gold">Conheça o escritório</a>
+          <a href="#equipe" class="btn btn--ghost">Nosso time <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+
+      <a href="#escritorio" class="hero__scroll" aria-label="Rolar para o conteúdo">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ============ ESCRITÓRIO / SOBRE ============ -->
+    <section class="section section--light" id="escritorio">
+      <div class="container about">
+        <div class="about__text">
+          <p class="eyebrow reveal">O escritório</p>
+          <h2 class="title reveal">Tradição jurídica,<br><em>visão contemporânea.</em></h2>
+          <p class="reveal">
+            Fundado por Caetano Veríssimo, o escritório nasce do compromisso com uma advocacia
+            rigorosa, ética e próxima do cliente. Cada caso é conduzido
+            diretamente pelos sócios, com estudo aprofundado e estratégia desenhada sob medida.
+          </p>
+          <p class="reveal">
+            Atuamos de forma preventiva e contenciosa, em todas as instâncias, com especial
+            atenção às questões constitucionais e regulatórias que moldam o ambiente de negócios
+            e os direitos fundamentais.
+          </p>
+
+          <div class="stats reveal">
+            <div class="stat"><strong data-count="15">0</strong><span>anos de atuação</span></div>
+            <div class="stat"><strong data-count="3">0</strong><span>idiomas de atendimento</span></div>
+            <div class="stat"><strong data-count="8">0</strong><span>áreas de atuação</span></div>
+          </div>
+        </div>
+
+        <div class="about__pillars">
+          <div class="tabs reveal" role="tablist" aria-label="Missão, visão e valores">
+            <button role="tab" aria-selected="true"  aria-controls="p-missao"  id="t-missao">Missão</button>
+            <button role="tab" aria-selected="false" aria-controls="p-visao"   id="t-visao"  tabindex="-1">Visão</button>
+            <button role="tab" aria-selected="false" aria-controls="p-valores" id="t-valores" tabindex="-1">Valores</button>
+          </div>
+          <div class="pillar reveal" role="tabpanel" id="p-missao" aria-labelledby="t-missao">
+            <span class="pillar__num">01</span>
+            <p>Oferecer soluções jurídicas precisas e seguras, construídas a partir do conhecimento técnico e do diálogo transparente com cada cliente.</p>
+          </div>
+          <div class="pillar" role="tabpanel" id="p-visao" aria-labelledby="t-visao" hidden>
+            <span class="pillar__num">02</span>
+            <p>Construir relações duradouras de confiança, pautadas pela ética, pelo rigor técnico e pela transparência.</p>
+          </div>
+          <div class="pillar" role="tabpanel" id="p-valores" aria-labelledby="t-valores" hidden>
+            <span class="pillar__num">03</span>
+            <ul class="pillar__list">
+              <li>Ética e integridade</li>
+              <li>Excelência técnica</li>
+              <li>Proximidade e confiança</li>
+              <li>Discrição e sigilo</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ÁREAS DE ATUAÇÃO ============ -->
+    <section class="section" id="areas">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow reveal">Áreas de atuação</p>
+          <h2 class="title reveal">Campos em que <em>atuamos</em></h2>
+        </header>
+        <div class="areas" id="areas-grid"><!-- preenchido por js/data.js --></div>
+      </div>
+    </section>
+
+    <!-- ============ EQUIPE ============ -->
+    <section class="section section--ink" id="equipe">
+      <div class="container">
+        <header class="section__head section__head--split">
+          <div>
+            <p class="eyebrow reveal">Nosso time</p>
+            <h2 class="title reveal">Conheça a <em>equipe</em></h2>
+          </div>
+          <p class="section__note reveal">Clique em um card para conhecer a trajetória completa de cada profissional.</p>
+        </header>
+
+        <div class="filters reveal" id="team-filters" role="group" aria-label="Filtrar por área"></div>
+        <div class="team" id="team-grid"><!-- preenchido por js/data.js --></div>
+      </div>
+    </section>
+
+    <!-- ============ CITAÇÃO ============ -->
+    <section class="quote">
+      <div class="container">
+        <blockquote class="reveal">
+          <p>“A advocacia não é profissão de covardes.”</p>
+          <cite>Sobral Pinto</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ============ CONTEÚDO ============ -->
+    <section class="section section--light" id="conteudo-juridico">
+      <div class="container">
+        <header class="section__head section__head--split">
+          <div>
+            <p class="eyebrow reveal">Conteúdo</p>
+            <h2 class="title reveal">Artigos &amp; <em>notícias</em></h2>
+          </div>
+          <a href="#" class="link-arrow reveal">Ver todas as publicações <span aria-hidden="true">→</span></a>
+        </header>
+        <div class="posts" id="posts-grid"><!-- preenchido por js/data.js --></div>
+      </div>
+    </section>
+
+    <!-- ============ CONTATO ============ -->
+    <section class="section" id="contato">
+      <div class="container contact">
+        <div class="contact__info">
+          <p class="eyebrow reveal">Contato</p>
+          <h2 class="title reveal">Fale com o <em>escritório</em></h2>
+          <p class="reveal">Preencha o formulário ou utilize um de nossos canais. Retornamos em até um dia útil.</p>
+
+          <ul class="contact__list reveal">
+            <li>
+              <span class="contact__label">Endereço</span>
+              Av. Exemplo, 1000 — Sala 101<br>Bairro — Cidade/UF — 00000-000
+            </li>
+            <li>
+              <span class="contact__label">Telefone</span>
+              <a href="tel:+550000000000">+55 (00) 0000-0000</a>
+            </li>
+            <li>
+              <span class="contact__label">E-mail</span>
+              <a href="mailto:contato@caetanoverissimo.adv.br">contato@caetanoverissimo.adv.br</a>
+            </li>
+            <li>
+              <span class="contact__label">Atendimento</span>
+              Segunda a sexta, 9h às 18h
+            </li>
+          </ul>
+        </div>
+
+        <form class="form reveal" id="contact-form" novalidate>
+          <div class="form__row">
+            <label class="field">
+              <span>Nome completo</span>
+              <input type="text" name="nome" autocomplete="name" required>
+            </label>
+            <label class="field">
+              <span>Telefone</span>
+              <input type="tel" name="telefone" autocomplete="tel">
+            </label>
+          </div>
+          <label class="field">
+            <span>E-mail</span>
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+          <label class="field">
+            <span>Assunto</span>
+            <select name="area" id="form-area">
+              <option value="">Selecione uma área</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Mensagem</span>
+            <textarea name="mensagem" rows="5" required></textarea>
+          </label>
+          <label class="check">
+            <input type="checkbox" name="lgpd" required>
+            <span>Concordo com o tratamento dos meus dados conforme a <a href="#">Política de Privacidade</a> (LGPD).</span>
+          </label>
+          <button type="submit" class="btn btn--gold btn--block">Enviar mensagem</button>
+          <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="#inicio" class="brand brand--lg" aria-label="Caetano Veríssimo — início">
+            <svg class="brand__mark"><use href="#monograma"/></svg>
+            <span class="brand__name">Caetano Veríssimo<small>Advocacia</small></span>
+          </a>
+          <!-- Identificação obrigatória (CED art. 44): razão social exata e nº de registro da sociedade na OAB.
+               Se for sociedade unipessoal, a razão social termina em "Sociedade Individual de Advocacia" (EAOAB art. 16, §4º). -->
+          <p class="footer__id">
+            Caetano Veríssimo Sociedade de Advogados<br>
+            Registro OAB/UF nº 0.000 · CNPJ 00.000.000/0001-00
+          </p>
+          <div class="social">
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7.5 10v6.5M7.5 7.3v.2M11 16.5V10m0 3c0-1.7 1-3 2.6-3S16.5 11 16.5 12.8v3.7"/></svg></a>
+            <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10 9.3v5.4l4.6-2.7z" fill="currentColor"/></svg></a>
+          </div>
+        </div>
+
+        <nav class="footer__col" aria-label="Mapa do site">
+          <h3>Navegação</h3>
+          <ul>
+            <li><a href="#escritorio">Escritório</a></li>
+            <li><a href="#areas">Áreas de atuação</a></li>
+            <li><a href="#equipe">Equipe</a></li>
+            <li><a href="#conteudo-juridico">Conteúdo</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer__col">
+          <h3>Newsletter</h3>
+          <p>Boletim com conteúdo jurídico informativo, enviado apenas a quem se inscrever.</p>
+          <form class="newsletter" id="newsletter-form">
+            <label class="sr-only" for="nl-email">Seu e-mail</label>
+            <input type="email" id="nl-email" placeholder="Seu e-mail" required>
+            <button type="submit" aria-label="Inscrever">→</button>
+          </form>
+          <p class="form__status" id="nl-status" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+
+      <div class="alert-scam">
+        <strong>Atenção a golpes.</strong>
+        O escritório não solicita pagamentos, depósitos ou dados bancários por WhatsApp ou telefone
+        para liberação de valores. Comunicações oficiais são feitas apenas pelo domínio
+        <b>caetanoverissimo.adv.br</b>. Em caso de dúvida, entre em contato pelos canais oficiais.
+      </div>
+
+      <div class="footer__bottom">
+        <span>© <span id="ano"></span> Caetano Veríssimo Advocacia. Todos os direitos reservados.</span>
+        <a href="#">Política de Privacidade</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flutuante -->
+  <a class="whats" href="https://wa.me/550000000000" target="_blank" rel="noopener" aria-label="Fale pelo WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z"/><path d="M8.8 8.3c.2-.4.4-.4.7-.4h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2 0 .4-.1.6l-.5.6c-.1.1-.2.3 0 .5.5.9 1.3 1.7 2.3 2.2.2.1.4.1.5-.1l.6-.7c.2-.2.3-.2.6-.1l1.5.7c.3.1.4.2.4.4 0 .6-.2 1.3-.8 1.6-.6.4-1.5.5-2.8 0-2-.8-3.6-2.5-4.3-4-.6-1.2-.4-2.5.2-3.3Z" fill="currentColor" stroke="none"/></svg>
+  </a>
+
+  <!-- ============ MODAL ADVOGADO ============ -->
+  <div class="modal" id="lawyer-modal" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modal-name">
+      <button class="modal__close" data-close aria-label="Fechar">×</button>
+      <aside class="modal__side">
+        <div class="modal__photo" id="modal-photo"></div>
+        <h2 id="modal-name"></h2>
+        <p class="modal__role" id="modal-role"></p>
+        <p class="modal__oab" id="modal-oab"></p>
+        <div class="modal__tags" id="modal-tags"></div>
+        <div class="modal__contacts" id="modal-contacts"></div>
+      </aside>
+      <div class="modal__body">
+        <div class="tabs tabs--modal" role="tablist" aria-label="Currículo">
+          <button role="tab" data-tab="trajetoria" aria-selected="true">Trajetória</button>
+          <button role="tab" data-tab="formacao"   aria-selected="false" tabindex="-1">Formação</button>
+          <button role="tab" data-tab="atuacao"    aria-selected="false" tabindex="-1">Atuação</button>
+          <button role="tab" data-tab="extras"     aria-selected="false" tabindex="-1">Publicações &amp; idiomas</button>
+        </div>
+        <div class="modal__content" id="modal-content" role="tabpanel" tabindex="0"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
